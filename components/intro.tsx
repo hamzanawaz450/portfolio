@@ -65,7 +65,7 @@ export default function Intro() {
         <span className="font-bold">Hello, I'm</span> I'm a{" "}
         <span className="font-bold bg-gradient-to-r from-[#1FABD9] to-[#E31877] bg-clip-text text-transparent">Hamza Nawaz</span>{" "}
         <span className=" font-bold bg-gradient-to-r from-[#1FABD9] to-[#E31877] bg-clip-text text-transparent">full-stack developer</span> with{" "}
-        <span className="font-bold">6 month</span> of experience. I enjoy
+        <span className="font-bold">1 year</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js, Nodejs, Flask, Chatbot, VectorDatabase)</span>
       </motion.h1>

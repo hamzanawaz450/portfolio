@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import chatbot from "@/public/chatbot.png"
+import chatbot from "@/public/quicktalk.png"
 import eventplanner from "@/public/eventplanner.png"
 import una from "@/public/una.png"
 import mernstack from "@/public/mernstack.png"
