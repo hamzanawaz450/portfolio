@@ -3,13 +3,51 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: #e2e8f0;
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: #1e293b;
+  color-scheme: dark;
+}
+
+::selection {
+  background: rgb(99 102 241 / 0.25);
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+/* Subtle grid behind the hero, faded out at the edges */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(100 116 139 / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(100 116 139 / 0.12) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 35%, transparent 100%);
+}
+
+/* Rotating gradient ring used around the profile photo */
+.ring-conic {
+  background: conic-gradient(from 0deg, #6366f1, #a855f7, #06b6d4, #6366f1);
+}
+
+/* Soft fade on both edges of the tech marquee */
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-cyan-300;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

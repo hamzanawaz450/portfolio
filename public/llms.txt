@@ -1,0 +1,20 @@
+# Hamza Nawaz
+
+> Full-stack developer from Pakistan building web apps and AI chatbots. Currently studying for an MSc in Data Science at the University of Milano-Bicocca, Milan, Italy.
+
+## Skills
+React, Next.js, TypeScript, JavaScript, Node.js, Express, Flask, Prisma, MongoDB, PostgreSQL, Pinecone (vector databases), AI chatbots, Tailwind CSS, WordPress. Studying Python, statistics, data visualization and machine learning.
+
+## Experience
+- Full-Stack & Chatbot Developer, Najoomi Technologies, Islamabad (2024 – present)
+- WordPress Developer, Fair Deals, Islamabad (Nov 2023 – Jan 2024)
+- Software Developer, IGATE Technologies, Islamabad (Jul – Aug 2023)
+
+## Education
+- MSc Data Science, University of Milano-Bicocca, Milan (2026 – present)
+- Bachelor's in Computer Science
+
+## Links
+- Portfolio: https://hamzadev-portfolio.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/hamza-nawaz-8b7204282/
+- Email: hamza.nawaz.malik450@gmail.com

@@ -2,48 +2,52 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { quickFacts } from "@/lib/data";
+import Reveal from "./reveal";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 0.5);
 
   return (
-    <motion.section
-      ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
-      id="about"
-    >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3 text-white">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span>, I decided to pursue my
-        passion for programming. I done 2 to 3 interships in{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, MongoDB, Flask, VectorDatabase, Chatbot
-        </span>
-        . I am also familiar with TypeScript. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
+    <section ref={ref} id="about" className="w-full scroll-mt-16 border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40">
+      <div className="mx-auto max-w-5xl px-6 py-24">
+        <SectionHeading number="01 · About" title="About me" />
 
-      <p className="text-white">
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the football.
-      </p>
-    </motion.section>
+        <div className="grid gap-10 md:grid-cols-[1.6fr_1fr]">
+          <Reveal className="space-y-5 text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-[1.05rem]">
+            <p>
+              I&apos;m a <strong className="font-semibold text-slate-900 dark:text-white">full-stack developer from Pakistan</strong> with
+              a degree in Computer Science. After several internships in web development, I now build
+              production web applications and AI chatbots at Najoomi Technologies — from the interface
+              to the database.
+            </p>
+            <p>
+              My core stack is <strong className="font-semibold text-slate-900 dark:text-white">React, Next.js, TypeScript and Node.js</strong>,
+              with MongoDB, PostgreSQL, Flask and Pinecone for data and retrieval. I care about clean code,
+              fast interfaces and solving real problems for real users.
+            </p>
+            <p>
+              I&apos;m currently studying for an <strong className="font-semibold text-slate-900 dark:text-white">MSc in Data Science at the University of Milano-Bicocca</strong> in
+              Milan, to combine software engineering with statistics and machine learning and build
+              smarter, data-driven products.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+          <dl className="h-fit divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:divide-slate-800 dark:border-slate-800 dark:bg-slate-900">
+            {quickFacts.map((fact) => (
+              <div key={fact.label} className="px-5 py-4">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  {fact.label}
+                </dt>
+                <dd className="mt-1 text-sm font-medium text-slate-900 dark:text-slate-100">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+          </Reveal>
+        </div>
+      </div>
+    </section>
   );
 }
